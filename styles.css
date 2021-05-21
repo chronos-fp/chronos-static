@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("./images/caaso.jpeg");
+  background-size: cover;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.desk {
+  display: block;
+}
+
+.blue-overlay {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(19, 41, 75, 0.93);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  flex: 2;
+  /* border: 1px solid #f09; */
+  text-align: center;
+  padding: 5%;
+  padding-right: 0;
+}
+
+.info {
+  flex: 1;
+  padding: 5%;
+  padding-left: 3%;
+  /* border: 1px solid red; */
+}
+
+.logo-img {
+  width: 85%;
+  /* border: 1px solid black; */
+}
+
+.slogan {
+  font-size: 1.45rem;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid yellow; */
+  margin-bottom: 20%;
+}
+
+.status .text {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  /* border: 1px solid yellow; */
+  text-align: center;
+  order: 1;
+}
+
+.gear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  order: 2;
+  /* border: 1px solid green; */
+}
+
+.gear img {
+  width: 70px;
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 17px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all ease-in 100ms;
+}
+
+.button .blue {
+  display: none;
+}
+
+.button .white {
+  display: inline;
+}
+
+.button:hover {
+  background-color: white;
+  color: #13294b;
+}
+
+.button:hover .blue {
+  display: inline;
+}
+
+.button:hover .white {
+  display: none;
+}
+
+.button .text {
+  flex: 4;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button .image {
+  flex: 1;
+  display: inline-flex;
+  justify-content: flex-start;
+  margin-left: 2px;
+  align-items: center;
+}
+
+.button .image img {
+  vertical-align: top;
+  height: 30px;
+}
+
+.button .text span {
+  vertical-align: top;
+  /* border: 1px solid red; */
+  display: inline-flex;
+  /* height: 100%; */
+  align-items: center;
+  /* flex: 1; */
+  height: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .status .text {
+    font-size: 2rem;
+  }
+  .gear img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .mobile.status {
+    flex: 1;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .button.mobile-active .blue {
+    display: inline;
+  }
+
+  .button.mobile-active .white {
+    display: none;
+  }
+
+  .button.mobile-active {
+    background-color: white;
+    color: #13294b;
+  }
+
+  .mobile.status .text {
+    font-size: 1.2rem;
+  }
+
+  .mobile.status .gear img {
+    width: 50px;
+  }
+
+  .desk {
+    display: none !important;
+  }
+
+  .status .text {
+    font-size: 1.8rem;
+  }
+  .gear {
+    margin-top: 10px;
+  }
+
+  .gear img {
+    width: 70px;
+  }
+  .slogan {
+    font-size: 0.9rem;
+  }
+  .blue-overlay {
+    flex-direction: column;
+  }
+
+  .logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .logo-img {
+    width: 75%;
+  }
+
+  .slogan {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .info {
+    padding: 0;
+    padding-top: 5%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+  }
+
+  .status {
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+
+  .gear {
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    padding-top: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .info {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .button {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
